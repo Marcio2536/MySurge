@@ -1,0 +1,8 @@
+#!name=Australian Community Media
+#!desc=Bypass Australian Community Media Paywall
+
+[MITM]
+hostname = %APPEND% www.newcastleherald.com.au, www.illawarramercury.com.au, www.centralwesterndaily.com.au, www.canberratimes.com.au, www.theadvocate.com.au, www.thecourier.com.au, www.examiner.com.au
+
+[Script]
+Australian Community Media = type=http-response,pattern=https://www.(examiner|theadvocate|thecourier|canberratimes|illawarramercury|newcastleherald|centralwesterndaily).com.au/story.*,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/surge/main/Examiner.js,script-update-interval=0

@@ -1,0 +1,5 @@
+#!name=Hide VPN Icon
+#!desc=Hide VPN Icon in the status bar while Surge is running.
+[General]
+hide-vpn-icon = true
+

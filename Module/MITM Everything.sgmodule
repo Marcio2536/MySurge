@@ -1,0 +1,5 @@
+#!name=MITM Everything
+#!desc=For https debugging
+[MITM]
+hostname = %APPEND% *:0
+

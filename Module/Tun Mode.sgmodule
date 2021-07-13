@@ -1,0 +1,8 @@
+#!name=Tun Only
+#!desc=Enable Tun Mode
+[General]
+compatibility-mode = 3
+
+
+
+
