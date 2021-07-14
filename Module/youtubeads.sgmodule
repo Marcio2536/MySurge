@@ -28,4 +28,4 @@
 hostname = %APPEND% *.googlevideo.com, s.youtube.com, www.youtube.com, *.googleapis.com, premiumyva.appspot.com
 
 [Script]
-Youtube Ads = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/surge/main/youtube.js,script-update-interval=0
+Youtube Ads = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/youtube.js,script-update-interval=0
