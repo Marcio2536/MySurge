@@ -1,0 +1,292 @@
+#!name=Bypass Paywall
+#!desc=Bypass Paywall on Surge ios
+
+[Rule]
+URL-REGEX,https:\/\/(m.timesofindia.com|timesofindia\.indiatimes\.com)\/native_popup\.cms\?type=regionUnavailable.*,REJECT
+URL-REGEX,https:\/\/(m.timesofindia.com|timesofindia\.indiatimes\.com)\/subscription_css\/.*,REJECT
+URL-REGEX,https://(m.timesofindia\.com|timesofindia\.indiatimes\.com)\/jsrender\/version-1\.cms,REJECT
+URL-REGEX,https:\/\/www\.hbrtaiwan\.com\/article_content_paywallremain\.php,REJECT
+URL-REGEX,https:\/\/www\.jpost\.com\/js\/js_article\.min\.js.*,REJECT
+URL-REGEX,https:\/\/www\.jpost\.com\/js\/uPremium\.min\.js.*,REJECT
+URL-REGEX,https://www.timeshighereducation\.com\/sites\/default\/files\/js\/js_bbCGL.+\.js,REJECT
+URL-REGEX,https:\/\/cooking\.nytimes\.com\/api\/v3\/access\?url.*,REJECT
+URL-REGEX,https:\/\/americanaffairsjournal\.org\/wp-content\/mu-plugins\/app\/src\/paywall\/paywall\.js,REJECT
+URL-REGEX,https:\/\/my\.mexiconewsdaily\.com\/action\/public.*,REJECT
+URL-REGEX,https:\/\/mwcm\.nyt\.com\/\.*metered.*,REJECT
+URL-REGEX,https:\/\/time\.com\/dist\/authentication\.js,REJECT
+URL-REGEX,https:\/\/www\.haaretz\.com\/logger.*,REJECT 
+URL-REGEX,https://www.haaretz\.co\.il\/htz\/js\/inter\.js,REJECT
+URL-REGEX,https://www.haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+,REJECT
+URL-REGEX,https:\/\/thediplomat\.com\/dpl-web\/.*paywall.*,REJECT
+URL-REGEX,https:\/\/thediplomat\.com\/dpl-web.*firebase-app\.min\.js,REJECT
+URL-REGEX,https:\/\/euobserver\.com\/js\/euobs\.js.*,REJECT
+URL-REGEX,https://.*\.hilltimes\.com\/.+\/js\/loadingoverlay\/loadingoverlay\.min\.js,REJECT
+URL-REGEX,https:\/\/www\.thenewatlantis\.com\/wp-content\/themes\/thenewatlantis\/js\/(gate|donate)\.js.*,REJECT 
+URL-REGEX,https:\/\/api\.watoday\.com\.au\/graphql.*,REJECT
+URL-REGEX,https://www.newstatesman.com/.*paywall.*js.*,REJECT
+URL-REGEX,https:\/\/file\.caixin\.com\/en\/web\/js\/caixin-content\.js,REJECT
+URL-REGEX,https:\/\/www\.bostonglobe\.com\/pf\/dist\/template\/article-(right-rail|opinion|rail-cv)\/default\.js.*,REJECT
+URL-REGEX,https:\/\/assets\.bwbx\.io\/.*bundle.*,REJECT
+URL-REGEX,https://.*\.(chicagobusiness|crainsnewyork|crainsdetroit)\.com\/.+\/js\/js_.+\.js,REJECT
+URL-REGEX,https:\/\/.*\.newsmemory\.com\/\?meter.*,REJECT
+URL-REGEX,https:\/\/.*\.newsmemory\.com\/.*paywall.*,REJECT
+URL-REGEX,https:\/\/www\.hudsonvalley360\.com\/shared-content\/art\/tncms\/subscription\.js,REJECT
+URL-REGEX,https?://.*\.townnews\.com/.*subscription.*,REJECT
+URL-REGEX,https:\/\/hk\.nextmgz\.com\/themes\/classic\/lib\/jquery\/blocksit\.min\.js,REJECT
+URL-REGEX,https:\/\/contributor\.google\.com\/scripts\/.*\/loader\.js,REJECT
+DOMAIN,crain-platform-shared.s3.amazonaws.com,REJECT
+DOMAIN,crain-platform-360dx-prod.s3.amazonaws.com,REJECT
+DOMAIN,s.tradingview.com,REJECT
+DOMAIN-SUFFIX,youmaker.com,REJECT
+DOMAIN,datawrapper.dwcdn.net,REJECT
+DOMAIN-SUFFIX,livechatinc.com,REJECT
+DOMAIN,datawrapper.dwcdn.net,REJECT 
+DOMAIN,mwcm.nytimes.com,REJECT
+DOMAIN-SUFFIX,wallkit.net,REJECT
+DOMAIN-SUFFIX,cxense.com,REJECT
+DOMAIN,graphql.haaretz.com,REJECT
+DOMAIN,smartwall.theglobeandmail.com,REJECT
+DOMAIN,idp.scientificamerican.com,REJECT
+DOMAIN-SUFFIX,fundingchoicesmessages.google.com,REJECT
+DOMAIN,static.omoplanet.com,REJECT
+DOMAIN-SUFFIX,mycapture.com,REJECT
+DOMAIN,meter.bostonglobe.com,REJECT
+DOMAIN-SUFFIX,zephr.sun-sentinel.com,REJECT
+DOMAIN-SUFFIX,zephr.com,REJECT
+DOMAIN-SUFFIX,piano.io,REJECT
+DOMAIN,policy.appledaily.com,REJECT
+DOMAIN-SUFFIX,blueconic.net,REJECT
+DOMAIN,metering.platform.sandiegouniontribune.com,REJECT-DROP
+DOMAIN-SUFFIX,onecount.net,REJECT
+URL-REGEX,https:\/\/www\.reuters\.com\/arc\/subs\/p\.min\.js,REJECT
+URL-REGEX,https?://.*\.tinypass\.com\/.*,REJECT
+URL-REGEX,https?://.*\.telegraph\.co\.uk.*martech.*,REJECT
+URL-REGEX,https?://.*\.medscapestatic\.com\/.*medscape-library\.js,REJECT
+URL-REGEX,https?://.*\.washingtonpost\.com\/.*\/pwapi-proxy\.min\.js,REJECT
+URL-REGEX,https?://cdn\.onesignal\.com\/sdks\/.*\.js,REJECT
+URL-REGEX,https?://(.*)?economist\.com\/engassets\/_next\/static\/chunks\/framework.*\.js,REJECT
+URL-REGEX,^https:\/\/www\.foreignaffairs\.com\/fa_paywall.*,REJECT
+URL-REGEX,https:\/\/giphy\.com\/static\/dist\/runtime.*\.bundle\.js,REJECT
+URL-REGEX,https:\/\/www\.thecourier\.com\.au\/static\/.*\.js,REJECT
+DOMAIN-SUFFIX,firebaseio.com,REJECT-DROP
+URL-REGEX,.*cdn-au\.piano\.io/api/tinypass.*\.js,REJECT
+URL-REGEX,^https:\/\/www\.foreignaffairs\.com\/fa_paywall.*,REJECT
+URL-REGEX,^https:\/\/thediplomat\.com\/dpl-web\/.*paywall.*,REJECT
+URL-REGEX,^https:\/\/thediplomat\.com\/dpl-web.*firebase-app\.min\.js,REJECT
+DOMAIN-SUFFIX,disqus.com,REJECT-DROP
+URL-REGEX,^https:\/\/mexiconewsdaily\.disqus\.com\/count\.js$,REJECT 
+DOMAIN-SUFFIX,acast.com,REJECT 
+URL-REGEX,^https:\/\/static\.investorschronicle\.co\.uk\/index\.*,REJECT 
+URL-REGEX,^https:\/\/www\.nzherald\.co\.nz\/pf\/dist\/.*\.js.*$,REJECT-DROP
+URL-REGEX,^https:\/\/api\.brisbanetimes\.com\.au\/graphql.*,REJECT-DROP
+URL-REGEX,https:\/\/cdn\.jifo\.co\/js\/dist\/bundle.*,REJECT-DROP
+URL-REGEX,^https:\/\/apis\.google\.com\/js\/.*,REJECT-DROP
+URL-REGEX,^https:\/\/www\.googleapis\.com\/identitytoolkit\/.*,REJECT-DROP
+URL-REGEX,^https:\/\/thediplomat\.com\/dpl-web\/.*,REJECT-DROP
+URL-REGEX,^https:\/\/cse\.google\.com\/cse\.js\.*,REJECT-DROP
+URL-REGEX,https:\/\/api\.smh\.com\.au\/graphql.*,REJECT-DROP
+URL-REGEX,https:\/\/www\.thesaturdaypaper\.com\.au\/sites\/all\/modules\/custom\/node_meter\/.*,REJECT-DROP
+URL-REGEX,^https:\/\/www\.thesaturdaypaper\.com\.au\/pwa\/serviceworker\/js$,REJECT-DROP
+URL-REGEX,^https:\/\/www\.thesaturdaypaper\.com\.au\/subscribe-paywall$,REJECT-DROP
+DOMAIN-SUFFIX,evolok.net,REJECT-DROP
+DOMAIN,auth.omoplanet.com,REJECT-DROP
+URL-REGEX,^https:\/\/api\.theage\.com\.au\/graphql.*,REJECT
+URL-REGEX,^https:\/\/www\.thetimes\.co\.uk\/d\/js\/.*bundle.*$,REJECT
+URL-REGEX,^https:\/\/assets\.bizjournals\.com\/dist\/.*$,REJECT
+URL-REGEX,https:\/\/www\.(thepeterboroughexaminer|thestar)\.com\/static\/bundle.js.*,REJECT
+DOMAIN-SUFFIX,pelcro.com,REJECT-DROP
+DOMAIN,experience.tinypass.com,REJECT-DROP
+URL-REGEX,^https:\/\/player\.cnevids\.com\/script\/video\/.*,REJECT
+DOMAIN,metering.platform.latimes.com,REJECT-DROP
+URL-REGEX,^https:\/\/blog\.csdn\.net\/sw\.js$,REJECT
+DOMAIN-SUFFIX,openinstall.io,REJECT
+URL-REGEX,^https:\/\/caltimes-lat-marketing-assets-dev\.s3-us-west-2\.amazonaws\.com\/subscriptions\/ad-arc-ears\/img\/bg-tan-palms-mobile\.gif$,REJECT 
+URL-REGEX,^https:\/\/assets\.bwbx\.io\/s3\/fence\/v4\/.*js$,REJECT
+DOMAIN,analytics.appledaily.com.hk,REJECT
+DOMAIN-SUFFIX,queryly.com,REJECT
+DOMAIN,loader-cdn.azureedge.net,REJECT
+URL-REGEX,^https:\/\/zephr\.technologyreview\.com\/wp-json\/.*,REJECT
+DOMAIN-SUFFIX,thirdwx.qlogo.cn,REJECT
+
+[URL Rewrite]
+(https://www.nationalreview.com/(news|corner|magazine|\d+)/.*)\?utm_source.* $1amp/ 307
+(^https://www\.nationalreview\.com/(news|magazine|corner|\d+)/.*/(?<!amp/)$) $1amp/ 307
+https:\/\/www\.adweek\.com\/(media|brand-marketing|social-marketing|creativity|commerce|programmatic|inside-the-brand|convergent-tv|agencies)\/([^/]+)\/(?!amp) https://www.adweek.com/$1/$2/amp/ 307
+https://asiatimes.com/(\d+)/(.*) https://asiatimes.com/$1/$2/?amp_markup=1 header
+https?://www.barrons.com/articles/(.*) https://www.barrons.com/amp/articles/$1 307
+https?://api.afr.com/graphql.* - reject
+https://(.*)\.wsj\.com/articles/ https://$1\.wsj\.com/amp/articles/ 307
+https?://cdn\.ampproject\.org\/v\d\/amp-access-.+\.js - reject
+
+
+
+
+[Header Rewrite]
+https://(timesofindia.indiatimes.com|m.timesofindia.com) header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https://www.hbrtaiwan.com header-del Cookie
+https://www.law.com header-add Referer https://www.facebook.com/
+https://www.law.com header-replace Referer https://www.facebook.com/
+https://www.nknews.org header-del Cookie
+https://www.nknews.org header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https://americanaffairsjournal.org header-del Cookie
+https://time.com header-del Cookie
+https?://www.usatoday.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https://www\.haaretz\.(com|co\.il) header-replace User-Agent "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.html)"
+https://www\.haaretz\.(com|co\.il) header-del Cookie
+https://www.discovermagazine.com header-del Cookie
+https://www.commentarymagazine.com header-del Cookie
+https://.*\.hilltimes.com header-del Cookie
+https://.*\.hilltimes.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https://euobserver.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https://(.*)?stratfor.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https://www.historyextra.com header-del Cookie
+https://.*\.cw.com.tw header-del Cookie
+https?://journalnow.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://journalnow.com header-del Cookie
+https?://www.detroitnews.com header-add X-Forwarded-For 66.249.66.1
+https?://www.detroitnews.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.detroitnews.com header-del Cookie
+https://asiatimes.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https://asiatimes.com header-del Cookie
+https?://www.miamiherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.miamiherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.miamiherald.com header-del Cookie
+https?://seekingalpha.com header-add Referer https://t.co/x?amp=1
+https?://seekingalpha.com header-replace Referer https://t.co/x?amp=1
+https?://www.kansas.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kansas.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kansas.com header-del Cookie
+https?://www.kentucky.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kentucky.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kentucky.com header-del Cookie
+https?://www.bellinghamherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.bellinghamherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.bellinghamherald.com header-del Cookie
+https?://www.daily-times.com header-del Cookie
+https?://.*\.idahostatesman.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.idahostatesman.com header-del Cookie
+https?://.*\.sacbee.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.sacbee.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.sacbee.com header-del Cookie
+https?://.*\.sanluisobispo.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.sanluisobispo.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.sanluisobispo.com header-del Cookie
+https://www.gazettenet.com header-del Cookie
+https?://www.kansascity.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kansascity.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kansascity.com header-del Cookie
+https?://www.worldpoliticsreview.com header-add Referer https://t.co/x?amp=1
+https?://www.worldpoliticsreview.com header-replace Referer https://t.co/x?amp=1
+https?://www.worldpoliticsreview.com header-add X-Forwarded-For 66.249.66.1
+https?://www.worldpoliticsreview.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.worldpoliticsreview.com header-del Cookie
+https?://.*\.thestate.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.thestate.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.thestate.com header-del Cookie
+https?://.*\.newsobserver.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.newsobserver.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.newsobserver.com header-del Cookie
+https?://www.clarionledger.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://.*\.ft\.com header-add Referer https://t.co/x?amp=1
+https?://sloanreview.mit.edu header-add Referer https://t.co/x?amp=1
+https?://www.fnlondon.com header-add Referer https://t.co/x?amp=1
+https?://www.heraldsun.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.heraldsun.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.heraldsun.com.au header-del Cookie
+https?://www.geelongadvertiser.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.geelongadvertiser.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.geelongadvertiser.com.au header-del Cookie
+https?://www.goldcoastbulletin.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.goldcoastbulletin.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.goldcoastbulletin.com.au header-del Cookie
+https?://thediplomat\.com header-del Cookie
+https?://(.*)?towardsdatascience.com header-del Cookie
+https?://www.adelaidenow.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.adelaidenow.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.adelaidenow.com.au header-del Cookie
+https?://www.ntnews.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.ntnews.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.ntnews.com.au header-del Cookie
+https?://www.themercury.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.themercury.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.themercury.com.au header-del Cookie
+https?://www.couriermail.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.couriermail.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.couriermail.com.au header-del Cookie
+https?://www.scientificamerican.com header-replace Referer https://t.co/x?amp=1
+https?://www.scientificamerican.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.scientificamerican.com header-del If-None-Match
+https?://.*\.scientificamerican.com header-del Cookie
+https?://www.foreignaffairs.com header-replace Referer https://t.co/x?amp=1
+https?://www.foreignaffairs.com header-del Cookie
+https?://www.fnlondon.com header-replace Referer https://t.co/x?amp=1
+https?://www.fnlondon.com header-add X-Forwarded-For 66.249.66.1
+https?://www.fnlondon.com header-del Cookie
+https?://www.dailytelegraph.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.dailytelegraph.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.dailytelegraph.com.au header-del Cookie
+^https:\/\/www\.jianshu\.com header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+https?://www.theaustralian.com.au header-add X-Forwarded-For 66.249.66.1
+https?://www.theaustralian.com.au header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.theaustralian.com.au header-del Cookie
+https?://www.thetimes.co.uk header-add X-Forwarded-For 66.249.66.1
+https?://www.thetimes.co.uk header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.thetimes.co.uk header-del Cookie
+https?://www\.theatlantic\.com header-del Cookie
+https?://qz.com header-del If-None-Match
+https://.*\.ft\.com header-del Cookie
+https://.*\.ft\.com header-replace Referer https://t.co/x?amp=1
+https?://.*\.ft\.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+sloanreview.mit.edu header-replace Referer https://t.co/x?amp=1
+https?://qz.com header-add X-Forwarded-For 66.249.66.1
+https?://qz.com header-replace Referer https://t.co/x?amp=1
+https?://qz.com header-del Cookie
+https?://qz.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://hbr.org header-del Cookie
+https?://asia.nikkei.com header-del Cookie
+https://www\.techinasia\.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://.*\.technologyreview\.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://.*\.technologyreview\.com header-del Cookie
+https?://hk\.(feature\.)?appledaily\.com header-del Cookie
+https?://labusinessjournal.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://labusinessjournal.com header-del Cookie
+https?://.*\.newyorker.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://www.latimes.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://www.latimes.com header-del Cookie
+^https:\/\/post\.smzdm\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+^https:\/\/blog\.csdn\.net\/ header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36$2 "
+https?://.*\.scmp.com header-del Cookie
+https?://www\.wired\.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+cdn\.ampproject\.org header-del Cookie
+https?://.*\.wsj.com header-del Cookie
+https?://telegraph.co.uk header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://medium.com header-del Cookie
+https?://www.quora.com header-del Referer
+https?://.*\.sina.cn header-del Content-Type
+https?://.*\.sina.com.cn header-del Content-Type
+https?://.*\.douban.com header-replace Accept text/html,website/xhtml+xml,website/xml;q=0.9,*/*;q=0.8
+https?://.*\.douban\.com header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+https?://.*\.douban.com header-del Cookie
+https?://.*\.sina.cn header-del Cookie
+https?://.*\.sina.com.cn header-del Cookie
+https?://.*\.sina.cn header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://.*\.sina.com.cn header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+https?://.*\.ft\.com header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+^https://theinitium.com header-del User-Agent
+^https://theinitium.com header-add Cookie "Mozilla / 5.0(Linux; Android 6.0.1; Nexus 5X Build / MMB29P) AppleWebKit / 537.36(KHTML, like Gecko) Chrome / 80.0.3987.92 Mobile Safari / 537.36(compatible; Googlebot / 2.1; +http://www.google.com/bot.html)Accept-Language: en-us"
+https?:\/\/.*\.bloomberg\.com header-del Cookie
+https?://www.washingtonpost.com header-del Cookie
+
+[MITM]
+hostname = %APPEND% m.timesofindia.com, timesofindia.indiatimes.com, nation.africa, www.hbrtaiwan.com, www.jpost.com, www.timeshighereducation.com,  www.law.com, www.nationalreview.com, cooking.nytimes.com, www.nknews.org, www.thepeterboroughexaminer.com, americanaffairsjournal.org, mwcm.nyt.com, time.com, www.usatoday.com, www.haaretz.co.il, www.haaretz.com, www.discovermagazine.com, www.commentarymagazine.com, *.hilltimes.com, euobserver.com, www.thenewatlantis.com, *.stratfor.com, stratfor.com, api.watoday.com.au, asiatimes.com, www.historyextra.com, *.cw.com.tw, www.newstatesman.com, *.crainsdetroit.com, *.crainsnewyork.com, mappsv5.caixin.com, journalnow.com, www.adweek.com, www.americanbanker.com, www.caixinglobal.com, file.caixin.com, journalnow.com, www.bostonglobe.com, www.detroitnews.com, *.chicagobusiness.com, asiatimes.com, www.google.com, www.miamiherald.com, seekingalpha.com, www.kansas.com, www.kentucky.com, www.bellinghamherald.com, *.idahostatesman.com, www.daily-times.com, *.sacbee.com, *.sanluisobispo.com, www.gazettenet.com, *.newsmemory.com, www.hudsonvalley360.com, *.townnews.com, www.kansascity.com, hk.nextmgz.com, contributor.google.com, www.reuters.com, www.worldpoliticsreview.com, *.thestate.com, *.newsobserver.com, www.theglobeandmail.com, www.clarionledger.com, *.piano.io, my.mexiconewsdaily.com, mexiconewsdaily.com, static.investorschronicle.co.uk, www.thesaturdaypaper.com.au, www.heraldsun.com.au, www.geelongadvertiser.com.au, www.goldcoastbulletin.com.au, www.nzherald.co.nz, api.brisbanetimes.com.au, www.barrons.com, cse.google.com, apis.google.com, thediplomat.com, towardsdatascience.com, *.towardsdatascience.com, api.smh.com.au, www.adelaidenow.com.au, www.ntnews.com.au, www.themercury.com.au, www.couriermail.com.au, www.scientificamerican.com, www.foreignaffairs.com, www.fnlondon.com, api.theage.com.au, www.dailytelegraph.com.au, www.theaustralian.com.au, www.thetimes.co.uk, www.haaretz.com, www.thestar.com, assets.bizjournals.com, www.theatlantic.com, *.ft.com, sloanreview.mit.edu, qz.com, api.afr.com, hbr.org, asia.nikkei.com, www.techinasia.com, thediplomat.com, qz.com, *.technologyreview.com, *.appledaily.com, labusinessjournal.com, *.newyorker.com, *.latimes.com, *.smzdm.com, post.m.smzdm.com, *.blueconic.net, *.medscapestatic.com, *.scmp.com, www.wired.com, cdn.ampproject.org, *.telegraph.co.uk, *.tinypass.com, medium.com, www.quora.com, *.douban.com, *.sina.com.cn, *.sina.cn, *bwbx.io, *.bloomberg.com, theinitium.com, *.wsj.com, *.theinitium.com, www.washingtonpost.com
+
+[Script]
+財新解鎖 = type=http-response,pattern=^https:\/\/mappsv5\.caixin\.com\/articlev.*,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/caixincn.js,script-update-interval=0
+American Banker = type=http-response,pattern=https://www.americanbanker.com,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/americanbanker.js,script-update-interval=0
+Caixin = type=http-response,pattern=https://www.caixinglobal.com/[0-9]+,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/Caixin.js,script-update-interval=0
+Haaretz = type=http-response,pattern=https://www.haaretz.(com|co\.il)/israel-news/.*,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/haaretz.js,script-update-interval=0
+Nation Africa = type=http-response,pattern=https://nation.africa/kenya,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/nationafrica.js,script-update-interval=0
+Tech in Asia = type=http-response,pattern=https://www.techinasia.com/.+,requires-body=1,max-size=1048576,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/techinasia.js,script-update-interval=0
+The Globe and Mail = type=http-response,pattern=https://www.theglobeandmail.com/.+/article-.+,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/theglobeandmail.js,script-update-interval=0
+The New Atlantis = type=http-response,pattern=https://www.thenewatlantis.com/publications,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/thenewatlantis.js,script-update-interval=0
+Time = type=http-response,pattern=https://time.com/\d+,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/Time.js,script-update-interval=0

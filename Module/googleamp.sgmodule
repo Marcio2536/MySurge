@@ -1,0 +1,16 @@
+#!name=Disable Google AMP
+#!desc=Disable Google AMP for Surge ios
+
+[Rule]
+URL-REGEX,^https:\/\/www\.google\.com(.*)?\/async\/amp.*,REJECT
+URL-REGEX,^https:\/\/www\.google\.com(.*)?\/gen_204.*amp.*,REJECT
+
+[URL Rewrite]
+^(https?)://www\.google\.com(.*)?/amp/s/(.*) $1://$2 307
+
+[MITM]
+hostname = %APPEND% www.google.com, www.google.com.??, www.google.??
+
+[Script]
+Google Direct URL = type=http-response,pattern=https?://www.google.com(.*)?/url.*,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/googleurl.js,script-update-interval=0
+
