@@ -1,0 +1,50 @@
+#!name=Gannett Inc
+#!desc=Bypass Gannett Inc. Paywall
+[Header Rewrite]
+https?://www.tcpalm.com header-add X-Forwarded-For 66.249.66.1
+https?://www.tcpalm.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.tcpalm.com header-del Cookie
+https?://www.jsonline.com header-add X-Forwarded-For 66.249.66.1
+https?://www.jsonline.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.jsonline.com header-del Cookie
+https?://www.clarionledger.com header-add X-Forwarded-For 66.249.66.1
+https?://www.clarionledger.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.clarionledger.com header-del Cookie
+https?://www.freep.com header-add X-Forwarded-For 66.249.66.1
+https?://www.freep.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.freep.com header-del Cookie
+https?://www.indystar.com header-add X-Forwarded-For 66.249.66.1
+https?://www.indystar.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.indystar.com header-del Cookie
+https?://www.cincinnati.com header-add X-Forwarded-For 66.249.66.1
+https?://www.cincinnati.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.cincinnati.com header-del Cookie
+https?://www.jacksonville.com header-add X-Forwarded-For 66.249.66.1
+https?://www.jacksonville.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.jacksonville.com header-del Cookie
+https?://www.tennessean.com header-add X-Forwarded-For 66.249.66.1
+https?://www.tennessean.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.tennessean.com header-del Cookie
+https?://www.dnj.com header-add X-Forwarded-For 66.249.66.1
+https?://www.dnj.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.dnj.com header-del Cookie
+https?://www.courier-journal.com header-add X-Forwarded-For 66.249.66.1
+https?://www.courier-journal.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.courier-journal.com header-del Cookie
+https?://www.democratandchronicle.com header-add X-Forwarded-For 66.249.66.1
+https?://www.democratandchronicle.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.democratandchronicle.com header-del Cookie
+https?://www.desmoinesregister.com header-add X-Forwarded-For 66.249.66.1
+https?://www.desmoinesregister.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.desmoinesregister.com header-del Cookie
+https?://www.azcentral.com header-add X-Forwarded-For 66.249.66.1
+https?://www.azcentral.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.azcentral.com header-del Cookie
+https?://www.news-press.com header-add X-Forwarded-For 66.249.66.1
+https?://www.news-press.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.news-press.com header-del Cookie
+https?://www.greatfallstribune.com header-add X-Forwarded-For 66.249.66.1
+https?://www.greatfallstribune.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.greatfallstribune.com header-del Cookie
+[MITM]
+hostname = %APPEND% www.tcpalm.com, www.jsonline.com, www.clarionledger.com, www.freep.com, www.indystar.com, www.cincinnati.com, www.jacksonville.com, www.tennessean.com, www.dnj.com, www.courier-journal.com, www.democratandchronicle.com, www.desmoinesregister.com, www.azcentral.com, www.news-press.com, www.greatfallstribune.com

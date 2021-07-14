@@ -1,0 +1,73 @@
+#!name=McClatchy Inc
+#!desc=Bypass McClatchy Inc. Paywall
+[Header Rewrite]
+https?://www.bellinghamherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.bellinghamherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.bellinghamherald.com header-del Cookie
+https?://www.centredaily.com header-add X-Forwarded-For 66.249.66.1
+https?://www.centredaily.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.centredaily.com header-del Cookie
+https?://www.charlotteobserver.com header-add X-Forwarded-For 66.249.66.1
+https?://www.charlotteobserver.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.charlotteobserver.com header-del Cookie
+https?://www.ledger-enquirer.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.ledger-enquirer.com header-del Cookie
+https?://www.ledger-enquirer.com header-add X-Forwarded-For 66.249.66.1
+https?://www.ledger-enquirer.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.ledger-enquirer.com header-del Cookie
+https?://www.fresnobee.com header-add X-Forwarded-For 66.249.66.1
+https?://www.fresnobee.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.fresnobee.com header-del Cookie
+https?://www.elNuevoHerald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.elNuevoHerald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.elNuevoHerald.com header-del Cookie
+https?://www.modbee.com header-add X-Forwarded-For 66.249.66.1
+https?://www.modbee.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.modbee.com header-del Cookie
+https?://www.myrtlebeachonline.com header-add X-Forwarded-For 66.249.66.1
+https?://www.myrtlebeachonline.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.myrtlebeachonline.com header-del Cookie
+https?://www.theolympian.com header-add X-Forwarded-For 66.249.66.1
+https?://www.theolympian.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.theolympian.com header-del Cookie
+https?://www.thenewstribune.com header-add X-Forwarded-For 66.249.66.1
+https?://www.thenewstribune.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.thenewstribune.com header-del Cookie
+https?://www.sanluisobispo.com header-add X-Forwarded-For 66.249.66.1
+https?://www.sanluisobispo.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.sanluisobispo.com header-del Cookie
+https?://www.tri-cityherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.tri-cityherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.tri-cityherald.com header-del Cookie
+https?://www.sunherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.sunherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.sunherald.com header-del Cookie
+https?://www.star-telegram.com header-add X-Forwarded-For 66.249.66.1
+https?://www.star-telegram.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.star-telegram.com header-del Cookie
+https?://www.miamiherald.com header-add X-Forwarded-For 66.249.66.1
+https?://www.miamiherald.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.miamiherald.com header-del Cookie
+https?://www.kentucky.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kentucky.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kentucky.com header-del Cookie
+https?://www.daily-times.com header-del Cookie
+https?://.*\.idahostatesman.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.idahostatesman.com header-del Cookie
+https?://.*\.sacbee.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.sacbee.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.sacbee.com header-del Cookie
+https?://www.kansas.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kansas.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kansas.com header-del Cookie
+https?://www.thestate.com header-add X-Forwarded-For 66.249.66.1
+https?://www.thestate.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.thestate.com header-del Cookie
+https?://www.kansascity.com header-add X-Forwarded-For 66.249.66.1
+https?://www.kansascity.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://www.kansascity.com header-del Cookie
+https?://.*\.newsobserver.com header-add X-Forwarded-For 66.249.66.1
+https?://.*\.newsobserver.com header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+https?://.*\.newsobserver.com header-del Cookie
+[MITM]
+hostname = %APPEND% www.bellinghamherald.com, www.centredaily.com, www.charlotteobserver.com, www.ledger-enquirer.com, www.fresnobee.com, www.elNuevoHerald.com, www.modbee.com, www.sanluisobispo.com, www.thenewstribune.com, www.theolympian.com, www.myrtlebeachonline.com, miamiherald.com, www.star-telegram.com, www.sunherald.com, *.sacbee.com, *.idahostatesman.com, www.kentucky.com, www.kansas.com, www.thestate.com, www.kansascity.com, www.newsobserver.com
