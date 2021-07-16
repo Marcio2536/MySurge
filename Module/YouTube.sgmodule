@@ -27,6 +27,7 @@ AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 ^https?:\/\/.+\.youtube\.com\/get_midroll_ - reject
 ^https?:\/\/.+\.googleapis\.com\/youtubei\/.+log_ - reject
 ^https?:\/\/.*\.googleapis\.com\/youtubei\/.+ad_ - reject
+
 [MITM]
 hostname = %APPEND% *.googlevideo.com, s.youtube.com, www.youtube.com, *.googleapis.com, premiumyva.appspot.com
 
