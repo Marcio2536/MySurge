@@ -2,6 +2,7 @@
 #!desc=Bypass Paywall on Surge ios
 
 [Rule]
+URL-REGEX,https:\/\/cdn\.ampproject\.org\/v0\/amp-connatix-player.*\.js,REJECT
 URL-REGEX,https:\/\/cdn\.theatlantic\.com\/tng\/static\/frontend\/dist\/theatlantic\/js\/bundle\/components\/.*\.js,REJECT
 URL-REGEX,https:\/\/(m.timesofindia.com|timesofindia\.indiatimes\.com)\/native_popup\.cms\?type=regionUnavailable.*,REJECT
 URL-REGEX,https:\/\/(m.timesofindia.com|timesofindia\.indiatimes\.com)\/subscription_css\/.*,REJECT
