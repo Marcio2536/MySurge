@@ -1,2 +1,2 @@
-console.log($network)
+console.log($network["cellular-data"])
 $done()
