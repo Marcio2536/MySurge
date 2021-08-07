@@ -1,0 +1,9 @@
+PROCESS-NAME,News
+USER-AGENT,AppleNews*
+USER-AGENT,News*
+USER-AGENT,com.apple.news*
+DOMAIN-SUFFIX,apple.news
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,news-assets.apple.com
+DOMAIN,news-client.apple.com
+DOMAIN,apple.comscoreresearch.com
