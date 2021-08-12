@@ -1,5 +1,5 @@
 #!name=MITM Everything
 #!desc=For https debugging
 [MITM]
-hostname = %APPEND% *:0
+hostname = %APPEND% *:0, -xteko.com,  -api*.twitter.com, -api.twitter.com,  -graphql.instagram.com, -graph.instagram.com, -*.facebook.com, -*.cdninstagram.com, -i.instagram.com, -xp.apple.com, -gsa.apple.com, -*.apps.apple.com, -*.mzstatic.com, -*.itunes.apple.com, -*.joinclubhouse.com, -*.clubhouseapi.com, -paxful.mobi, -*.qiwi.com, -*.octopus-cards.com, -*.octopuscards.com, -translate.google.com, -*.member-hsbc-group.com, -*.hsbc.com.hk, -*.hangseng.com, -*.icloud.com, -*.ap.spotify.com, -sequoia.apple.com, -*.whatsapp.net
 
