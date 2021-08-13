@@ -1,7 +1,7 @@
 #!name=Bypass Spotify Limit
 #!desc=Play Spotify in multiple devices
 [URL Rewrite]
-#https://spclient.wg.spotify.com/(?!(album-entity-view|artistview|social-connect|offline)).*device.* - reject
 https://spclient.wg.spotify.com/(connect-state|device-capabilities)/.* - reject
+
 [MITM]
 hostname= %APPEND% spclient.wg.spotify.com
