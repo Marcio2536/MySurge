@@ -1,0 +1,4 @@
+AND,((DOMAIN-KEYWORD,bstar), (DOMAIN-SUFFIX,akamaized.net))
+DOMAIN-SUFFIX,biliintl.com
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN,apm-misaka.biliapi.net
