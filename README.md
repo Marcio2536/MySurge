@@ -1,2 +1,2 @@
 # MySurge
-My personal Surge Configuration. For non-commercial use only.
+My personal Surge Repository.
