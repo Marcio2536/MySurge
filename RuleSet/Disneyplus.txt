@@ -1,3 +1,2 @@
-USER-AGENT,Disney+*
 DOMAIN,www.disneyplus.com
 DOMAIN-SUFFIX,bamgrid.com
