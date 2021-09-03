@@ -1,5 +1,3 @@
 USER-AGENT,Disney+*
-DOMAIN-SUFFIX,disneyplus.com
-DOMAIN-SUFFIX,disney-plus.net
-DOMAIN-SUFFIX,disneystreaming.com
-DOMAIN,cdn.registerdisney.go.com
+DOMAIN,www.disneyplus.com
+DOMAIN-SUFFIX,bamgrid.com
