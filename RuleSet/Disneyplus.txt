@@ -1,2 +1,2 @@
-DOMAIN,www.disneyplus.com
+DOMAIN-SUFFIX,disneyplus.com
 DOMAIN-SUFFIX,bamgrid.com
