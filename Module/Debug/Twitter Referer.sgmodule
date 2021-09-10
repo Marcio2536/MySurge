@@ -1,0 +1,6 @@
+#!name=Twitter Referer
+#!desc=Apply twitter referer to all websites
+[Header Rewrite]
+.+ header-add Referer https://t.co/x?amp=1
+.+ header-replace Referer https://t.co/x?amp=1
+

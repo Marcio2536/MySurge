@@ -1,0 +1,5 @@
+#!name=Facebook Referer
+#!desc=Apply facebook referer to all websites
+[Header Rewrite]
+.+ header-add Referer https://www.facebook.com/
+.+ header-replace Referer https://www.facebook.com/

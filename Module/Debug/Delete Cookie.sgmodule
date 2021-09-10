@@ -1,0 +1,5 @@
+#!name=Delete Cookie
+#!desc=Delete cookies for all websites
+[Header Rewrite]
+.+ header-del Cookie
+

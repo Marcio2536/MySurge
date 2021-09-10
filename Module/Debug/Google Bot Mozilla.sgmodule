@@ -1,0 +1,6 @@
+#!name=Google Bot Mozilla
+#!desc=Apply google bot user agent to all websites
+[Header Rewrite]
+.+ header-replace User-Agent "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+header-add X-Forwarded-For 66.249.66.1
+

@@ -1,0 +1,4 @@
+#!name=Block Internet
+#!desc=Reject all internet traffic
+[Rule]
+FINAL,REJECT

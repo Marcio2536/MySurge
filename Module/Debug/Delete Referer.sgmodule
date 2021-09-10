@@ -1,0 +1,6 @@
+#!name=Delete Referer
+#!desc=Delete Referer for all websites
+[Header Rewrite]
+.+ header-del Referer
+
+

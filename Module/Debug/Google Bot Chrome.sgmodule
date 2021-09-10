@@ -1,0 +1,6 @@
+#!name=Google Bot Chrome
+#!desc=Apply google bot user agent to all websites
+[Header Rewrite]
+.+ header-replace User-Agent "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+.+ header-add X-Forwarded-For 66.249.66.1
+
