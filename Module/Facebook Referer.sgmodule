@@ -1,5 +1,8 @@
-#!name=MITM Everything
-#!desc=For https debugging
+#!name=Facebook Referer
+#!desc=Apply facebook referer to all websites
+[Header Rewrite]
+.+ header-add Referer https://www.facebook.com/
+.+ header-replace Referer https://www.facebook.com/
+
 [MITM]
 hostname = %APPEND% -xteko.com,  -api*.twitter.com, -api.twitter.com,  -graphql.instagram.com, -graph.instagram.com, -*.facebook.com, -*.cdninstagram.com, -i.instagram.com, -xp.apple.com, -gsa.apple.com, -configuration.apple.com, -*.push.apple.com, -*.music.apple.com, -pds.ess.apple.com, -*.podcasts.apple.com, -music.apple.com, -*.apps.apple.com, -*.mzstatic.com, -*.itunes.apple.com, -itunes.apple.com, -*.joinclubhouse.com, -*.clubhouseapi.com, -paxful.mobi, -*.qiwi.com, -*.octopus-cards.com, -*.octopuscards.com, -translate.google.com, -*.member-hsbc-group.com, -*.hsbc.com.hk, -*.hangseng.com, -*.icloud.com, -sequoia.apple.com, -*.whatsapp.net:0, -*.tapngo.com.hk, -mts-service.mts.ru:0, -*.whispersystems.org, -game.brawlstarsgame.com:0, -zoom.us, -*.zoom.us, -*.ap.spotify.com, -meetings.googleapis.com, -api.protonmail.ch, -gateway.discord.gg, -47.246.108.*, -149.154.17?.*, -149.154.16?.*, -91.108.5?.*, -91.108.2?.*, -91.108.1?.*, -91.108.?.*, *:0
-
