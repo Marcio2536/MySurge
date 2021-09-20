@@ -1,0 +1,4 @@
+#!name=Always Real IP
+#!desc=This module asks Surge to return a real IP address instead of a fake IP address when Surge VIF handles a DNS question
+[General]
+always-real-ip = *
