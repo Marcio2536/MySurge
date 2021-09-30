@@ -3,10 +3,9 @@
 
 [Rule]
 URL-REGEX,^https:\/\/www\.google\.com(.*)?\/async\/amp.*,REJECT
-URL-REGEX,^https:\/\/www\.google\.com(.*)?\/gen_204.*amp.*,REJECT
 
 [URL Rewrite]
-^(https?)://www\.google\.com(.*)?/amp/s/(.*) $1://$2 307
+(https?)://www\.google\.com(.*)?/amp/s/(.*) $1://$2 307
 
 [MITM]
 hostname = %APPEND% www.google.com, www.google.com.??, www.google.??
