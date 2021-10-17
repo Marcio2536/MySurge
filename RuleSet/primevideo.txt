@@ -1,0 +1,8 @@
+USER-AGENT,InstantVideo.US*
+USER-AGENT,Prime%20Video*
+DOMAIN-SUFFIX,amazonvideo.com
+DOMAIN-SUFFIX,primevideo.com
+DOMAIN,atv-ps.amazon.com
+DOMAIN,fls-na.amazon.com
+DOMAIN,avodmp4s3ww-a.akamaihd.net
+DOMAIN-KEYWORD,avoddashs
