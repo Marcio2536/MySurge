@@ -35,7 +35,7 @@ const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
   title: 'Disney+ Check',
-  availableContent: 'Available➟ #REGION_FLAG# #REGION_NAME_EN#',
+  availableContent: 'Available ➟ #REGION_FLAG# #REGION_NAME_EN#',
   availableIcon: undefined,
   availableIconColor: undefined,
   availableStyle: 'good',
