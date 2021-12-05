@@ -34,7 +34,7 @@ const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
 const DEFAULT_OPTIONS = {
-  title: 'Disney+ 解鎖檢測',
+  title: 'Disney+ Check',
   availableContent: 'Available➟ #REGION_FLAG# #REGION_NAME_EN#',
   availableIcon: undefined,
   availableIconColor: undefined,
