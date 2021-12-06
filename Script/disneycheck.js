@@ -47,7 +47,7 @@ const DEFAULT_OPTIONS = {
   notAvailableIcon: undefined,
   notAvailableIconColor: undefined,
   notAvailableStyle: 'alert',
-  errorContent: 'Check%20fails.%20Please%20try%20again%20later.',
+  errorContent: 'Check fails. Please try again later.',
   errorIcon: undefined,
   errorIconColor: undefined,
   errorStyle: 'error',
