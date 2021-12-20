@@ -1,11 +1,7 @@
 #!name=Bilibili International
 #!desc=Unlock Bilibili International
-[Rule]
-URL-REGEX,https:\/\/api\.bilibili\.com\/x\/push\/report,REJECT
-URL-REGEX,https:\/\/data\.bilibili\.com\/log\/mobile\?ios,REJECT
-
 [URL Rewrite]
-(^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d/msgfeed).+)(&locale=en_US)(.+)(&s_locale=en_US)(.+)(&sim_code=\d+)(.+) $1&locale=en_SG$5&s_locale=en_SG$7&sim_code=52507$9 header
+(^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|share|v\d/msgfeed).+)(&locale=en_US)(.+)(&s_locale=en_US)(.+)(&sim_code=\d+)(.+) $1&locale=en_SG$5&s_locale=en_SG$7&sim_code=52507$9 header
 (^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d/msgfeed).+)(&s_locale=en_US)(.+)(&sim_code=\d+)(.+) $1&s_locale=en_SG$5&sim_code=52507$7 header
 (^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d/msgfeed).+)(&s_locale=en_US)(.+)(&sim_code=\d+)(.+) $1&s_locale=en_SG$5&sim_code=52507$7 header
 (^https?:\/\/passport\.biliintl\.com\/x\/intl\/passport-login\/.+)(&locale=en_US)(.+)(&s_locale=en_US)(.+)(&sim_code=\d+)(.+) $1&locale=en_SG$3&s_locale=en_SG$5&sim_code=52507$7
@@ -15,6 +11,6 @@ hostname = %APPEND% app.biliintl.com, passport.biliintl.com
 
 [Script]
 bstar_play = type=http-request,pattern=^https?:\/\/app\.biliintl\.com\/(intl\/gateway\/v\d\/app\/data\/report\/heartbeat\/mobile|x\/(history|reply)/v\d/add),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/bstarunlock.js,script-update-interval=0
-bstar_play = type=http-request,pattern=https://app.biliintl.com/intl/gateway/v2/app/relation/modify,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/bstarunlock.js,script-update-interval=0
+bstar_play = type=http-request,pattern=https://app.biliintl.com/intl/gateway/v2/app/(relation\/modify|view\/like),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/bstarunlock.js,script-update-interval=0
 bstar_play = type=http-request,pattern=https://app.biliintl.com/x/intl/member/app/sign/update.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/bstarunlock.js,script-update-interval=0
 bstar_login = type=http-request,pattern=^https?:\/\/passport\.biliintl\.com\/x\/intl\/passport-login\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/bstarunlock.js,script-update-interval=0
