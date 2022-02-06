@@ -1,0 +1,5 @@
+#!name=🇨🇳Alibaba DoH
+#!desc=Enable DNS over HTTPS with Alibaba public DNS
+
+[General]
+doh-server = https://dns.alidns.com/dns-query
