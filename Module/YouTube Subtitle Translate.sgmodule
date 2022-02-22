@@ -1,0 +1,17 @@
+#!name=YouTube Subtitle Translation
+#!desc=Translate Youtube Subtitle
+[URL Rewrite]
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=pt(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=pt$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=my(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=my$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=id(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=id$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=vi(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=vi$2&tlang=zh-Hant header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=zh(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=zh$2&tlang=zh-Hant header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=zh-CN(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=zh-CN$2&tlang=zh-Hant header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=kr(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=kr$2&tlang=zh-Hant header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=it(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=it$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=ru(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=ru$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=ar(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=ar$2&tlang=zh-Hant header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=de(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=de$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=es(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=es$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=fr(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=fr$2&tlang=en-US header
+(https:\/\/www.youtube.com\/api\/timedtext\?.+)&lang=ja(.+)?(?<!&tlang=zh\-Hant)$ $1&lang=ja$2&tlang=zh-Hant header
