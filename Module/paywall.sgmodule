@@ -2,6 +2,8 @@
 #!desc=Bypass Paywall on Surge ios
 
 [Rule]
+URL-REGEX,https:\/\/www\.washingtonpost\.com\/subscribe\/static\/tetro-client\/fusion\/tetro\.min\.js,REJECT
+URL-REGEX,https:\/\/www\.washingtonpost\.com\/subscribe\/paywall\/get-softwall,REJECT
 URL-REGEX,https?://.*\.washingtonpost\.com\/.*\/pwapi-proxy\.min\.js,REJECT
 URL-REGEX,https:\/\/ev\.nation\.africa\/acd\/api\/.*\/widgets\/templates\/paywall,REJECT
 URL-REGEX,https:\/\/cdn\.ampproject\.org\/v0\/amp-connatix-player.*\.js,REJECT
