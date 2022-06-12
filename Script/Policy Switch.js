@@ -1,3 +1,7 @@
+/* 
+A shortcut for quickly switching proxy policies of Surge within the Shortcut app
+Shortcut Link : https://www.icloud.com/shortcuts/c444c3f37899462cad90110512dae974
+Policy Switch = type=http-request,pattern=http:\/\/policy\.switch,requires-body=1,max-size=-1,control-api=1,script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/main/Script/Policy%20Switch.js,script-update-interval=0 */
 const $ = new nobyda();
 const url = $request.url;
 const body = JSON.parse($request.body || '{}');
