@@ -1,3 +1,4 @@
+// Bypass Sim Card Detection on Bilibili International (iOS & iPadOS only)
 let body = $request.body;
 
 body = body.replace(/&sim_code=\d+/,"&sim_code=52507");
