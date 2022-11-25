@@ -1,0 +1,12 @@
+#!name=KMB App Block Advertising
+#!desc=Remove Ads in KMB App
+[Rule]
+DOMAIN,app1933.move-hub.net,REJECT
+[URL REWRITE]
+https:\/\/app\.kmb\.hk\/app1933\/index\.php - reject
+https://app1933.kmb.hk/kmb_v2_webservice/api.php(.*)&version=1.8.2 https://app1933.kmb.hk/kmb_v2_webservice/api.php$1&version=10.0.1 307
+https://app.kmb.hk/app1933/Route/Link/urlImpNotice.php - reject
+https://app1933.kmb.hk/kmb_v2_webservice/.+(adcode|getbusstopad).+ - reject
+
+[MITM]
+hostname = %APPEND% app.kmb.hk, app1933.kmb.hk
