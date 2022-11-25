@@ -1,2 +1,2 @@
 # MySurge
-My personal Surge Repository.
+My personal repository for Surge.
