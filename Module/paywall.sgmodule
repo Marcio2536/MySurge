@@ -40,6 +40,7 @@ URL-REGEX,https:\/\/www\.hudsonvalley360\.com\/shared-content\/art\/tncms\/subsc
 URL-REGEX,https?://.*\.townnews\.com/.*subscription.*,REJECT
 URL-REGEX,https:\/\/hk\.nextmgz\.com\/themes\/classic\/lib\/jquery\/blocksit\.min\.js,REJECT
 URL-REGEX,https:\/\/contributor\.google\.com\/scripts\/.*\/loader\.js,REJECT
+DOMAIN,samizdat-graphql.nytimes.com,REJECT
 DOMAIN,crain-platform-shared.s3.amazonaws.com,REJECT
 DOMAIN,crain-platform-360dx-prod.s3.amazonaws.com,REJECT
 DOMAIN,s.tradingview.com,REJECT
