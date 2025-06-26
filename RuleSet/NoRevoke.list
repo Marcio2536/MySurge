@@ -1,0 +1,23 @@
+# NAME: ADP Anti-Revocation Blocklist
+# UPDATED: 2025-06-26
+# DOMAIN: 19
+
+DOMAIN,ocsp2.apple.com
+DOMAIN,valid.apple.com
+DOMAIN,crl.apple.com
+DOMAIN,certs.apple.com
+DOMAIN,appattest.apple.com
+DOMAIN,vpp.itunes.apple.com
+DOMAIN,ocsp2-lb.apple.com
+DOMAIN,ocsp2.g.aaplimg.com
+DOMAIN,crl3.digicert.com
+DOMAIN,crl4.digicert.com
+DOMAIN,ocsp.digicert.cn
+DOMAIN,ocsp.digicert.com
+DOMAIN,ocsp2-lb.apple.com.akadns.net
+DOMAIN,gsas.apple.com
+DOMAIN,gsas.idms-apple.com.akadns.net
+DOMAIN,ma-gsa-hb-prod.apple.com
+DOMAIN,aidc.apple.com
+DOMAIN,init.ess.apple.com
+DOMAIN,iphone-ld.origin-apple.com
