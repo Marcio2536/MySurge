@@ -50,25 +50,20 @@ try {
 // They MUST be assigned inside the async IIFE *before* being used by helpers/main logic.
 let SURGE_BASE_URL = "";
 let SURGE_API_KEY = "";
-let GEMINI_API_KEY = "";
 let POLICY_GROUP_NAME = "";
 
 // --- Static Configuration (Copied from v4.1) ---
 const TEST_URLS = {
     openai: "https://api.openai.com/v1/models",
-    gemini: "https://generativelanguage.googleapis.com/v1beta/chat/completions",
+    notebooklm: "https://notebooklm.google/",
     anthropic: "https://api.anthropic.com/v1/messages"
 };
-const GEMINI_REQUEST_BODY = JSON.stringify({
-    "stream": true, "model": "gemini-2.0-flash",
-    "messages": [{"role": "user", "content": "hello"}], "temperature": 1
-});
+const NOTEBOOKLM_UNSUPPORTED_URL = "https://notebooklm.google/?location=unsupported";
 const GEO_BLOCK_KEYWORDS = [
     "location is not supported", "forbidden", "request not allowed",
     "unsupported_country", "geo-restricted", "not available in your region",
     "not available in your country", "permission denied", "not supported for the api use"
 ];
-let skipGeminiCheck = false; // Will be set based on assigned GEMINI_API_KEY
 
 // --- Helper Functions (Copied EXACTLY from v4.1) ---
 // These functions now implicitly rely on the global 'let' variables above
@@ -105,26 +100,82 @@ function checkSimpleUrlAccessibility(url, proxyName, serviceName = 'Service') {
     });
 }
 
-function checkGeminiAccessibility(proxyName) {
-    // Identical to v4.1 - uses global GEMINI_API_KEY, TEST_URLS, GEMINI_REQUEST_BODY
-     return new Promise((resolve) => {
-        // Note: relies on GEMINI_API_KEY being assigned correctly before this is called
-        if (!GEMINI_API_KEY) { console.warn(`   - Gemini Check Aborted: API Key appears missing.`); return resolve(true); } // Safety check
-        const options = { url: TEST_URLS.gemini, method: 'POST', policy: proxyName, timeout: 20, headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${GEMINI_API_KEY}`, 'User-Agent': 'Surge/1.0 (Geo-Check Module/Gemini)', }, body: GEMINI_REQUEST_BODY };
-        $httpClient.post(options, (error, response, data) => {
-            if (error) { console.log(`   - Gemini Test Failed (Network Error) via ${proxyName}: ${error}`); resolve(false); return; }
-            const responseBody = data ? data.toLowerCase() : ""; const isBlocked = GEO_BLOCK_KEYWORDS.some(keyword => responseBody.includes(keyword.toLowerCase()));
-            if (isBlocked) { console.log(`   - Gemini Test Failed (Geo-Blocked) via ${proxyName}: Found keyword.`); resolve(false); } else { if (response && response.status >= 400) { console.log(`   - Gemini Test Passed (HTTP Error Ignored) via ${proxyName}: Status ${response.status}`); } else { console.log(`   - Gemini Test Passed (OK or Ignored Error) via ${proxyName}: Status ${response ? response.status : 'N/A'}`); } resolve(true); }
-        });
+function getHeaderValue(headers, headerName) {
+    if (!headers) { return null; }
+    const targetName = headerName.toLowerCase();
+    for (const key in headers) {
+        if (Object.prototype.hasOwnProperty.call(headers, key) && key.toLowerCase() === targetName) {
+            return headers[key];
+        }
+    }
+    return null;
+}
+
+function resolveRedirectUrl(location, currentUrl) {
+    if (!location) { return null; }
+    try {
+        return new URL(location, currentUrl).toString();
+    } catch (error) {
+        if (/^https?:\/\//i.test(location)) { return location; }
+        if (location.charAt(0) === '/') {
+            const match = currentUrl.match(/^(https?:\/\/[^/]+)/i);
+            return match ? `${match[1]}${location}` : location;
+        }
+        const base = currentUrl.replace(/[#?].*$/, '').replace(/\/[^/]*$/, '/');
+        return `${base}${location}`;
+    }
+}
+
+function checkNotebookLmRedirect(proxyName) {
+    return new Promise((resolve) => {
+        const maxRedirects = 8;
+        let currentUrl = TEST_URLS.notebooklm;
+        let redirectCount = 0;
+
+        function requestCurrentUrl() {
+            const options = {
+                url: currentUrl,
+                method: 'GET',
+                policy: proxyName,
+                timeout: 20,
+                "auto-redirect": false,
+                headers: { 'User-Agent': 'Surge/1.0 (Geo-Check Module/NotebookLM)' }
+            };
+
+            $httpClient.get(options, (error, response) => {
+                if (error) { console.log(`   - NotebookLM Test Failed (Network Error) via ${proxyName}: ${error}`); resolve(false); return; }
+
+                const status = response ? response.status : 0;
+                const location = response ? getHeaderValue(response.headers, 'Location') : null;
+                if (status >= 300 && status < 400 && location) {
+                    const nextUrl = resolveRedirectUrl(location, currentUrl);
+                    if (!nextUrl) { console.log(`   - NotebookLM Test Failed (Invalid Redirect) via ${proxyName}: ${location}`); resolve(false); return; }
+                    currentUrl = nextUrl;
+                    redirectCount += 1;
+                    if (redirectCount > maxRedirects) { console.log(`   - NotebookLM Test Failed (Too Many Redirects) via ${proxyName}: Final URL ${currentUrl}`); resolve(false); return; }
+                    requestCurrentUrl();
+                    return;
+                }
+
+                if (currentUrl === NOTEBOOKLM_UNSUPPORTED_URL) {
+                    console.log(`   - NotebookLM Test Failed (Unsupported Location) via ${proxyName}: Final URL ${currentUrl}`);
+                    resolve(false);
+                } else {
+                    console.log(`   - NotebookLM Test Passed (Redirect Result) via ${proxyName}: Final URL ${currentUrl}, Status ${status || 'N/A'}`);
+                    resolve(true);
+                }
+            });
+        }
+
+        requestCurrentUrl();
     });
 }
 
 async function testProxy(proxyName) {
-    // Identical to v4.1 - uses global skipGeminiCheck
     console.log(`Testing proxy: ${proxyName}...`);
     try {
         const checks = []; checks.push(checkSimpleUrlAccessibility(TEST_URLS.openai, proxyName, 'OpenAI'));
-        if (!skipGeminiCheck) { checks.push(checkGeminiAccessibility(proxyName)); } else { console.log(`   - Gemini Test Skipped (Flag Set) for ${proxyName}`); }
+        checks.push(checkNotebookLmRedirect(proxyName));
         checks.push(checkSimpleUrlAccessibility(TEST_URLS.anthropic, proxyName, 'Anthropic'));
         const results = await Promise.all(checks); const isWorking = results.every(result => result === true);
         if (isWorking) { console.log(`Proxy ${proxyName} PASSED all active checks.`); } else { console.log(`Proxy ${proxyName} FAILED one or more active checks.`); } return isWorking;
@@ -159,7 +210,6 @@ async function switchPolicy(groupName, policyName) {
     // This makes them accessible to the globally defined helper functions
     SURGE_BASE_URL = ARGS.surge_url; 
     SURGE_API_KEY = ARGS.surge_key;
-    GEMINI_API_KEY = ARGS.gemini_key; // Will be '' if missing/empty
     POLICY_GROUP_NAME = ARGS.group_name; // Already validated as present during parsing
 
     const startTime = new Date();
@@ -175,15 +225,7 @@ async function switchPolicy(groupName, policyName) {
     }
     // POLICY_GROUP_NAME is also checked during parsing
 
-    // Set skipGeminiCheck based on the assigned variable
-    skipGeminiCheck = !GEMINI_API_KEY; // True if GEMINI_API_KEY is empty string or was missing
-    if (skipGeminiCheck) {
-        console.warn("Gemini API Key is missing or empty. Gemini checks will be skipped.");
-        // Optional: Notify if desired, but might be noisy if intentional
-        // $notification.post("AI Proxy Check Info", "Gemini Key Missing", "Gemini check skipped.");
-    }
-
-    console.log(`Using Config: SurgeURL=${SURGE_BASE_URL}, Group='${POLICY_GROUP_NAME}', SkipGemini=${skipGeminiCheck}`);
+    console.log(`Using Config: SurgeURL=${SURGE_BASE_URL}, Group='${POLICY_GROUP_NAME}'`);
 
     // --- V4.1 Core Logic Starts Here ---
     let groupPolicies = [];
