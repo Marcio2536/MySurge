@@ -1,8 +1,8 @@
 #!name=AI Proxy Geo-Checker
 #!desc=Automatically checks proxies in a policy group for AI service access (OpenAI/Gemini/Anthropic) and switches if the proxy is geo-blocked. Runs as a cron job.
 #!category=Policy Automation
-#!arguments=surge_url:https://127.0.0.1:6800,surge_key,gemini_key,group_name:AI Tools,cron_expression:0 */15 * * * *,timeout_seconds:180
-#!arguments-desc=[surge_url]\n(Optional) Surge HTTP API Base URL. Default: https://127.0.0.1:6800.\n\n[surge_key]\n(Required) Your Surge HTTP API Key (Get from Surge > Settings > HTTP API). \n\n[gemini_key]\n(Required for Gemini check) Google AI Gemini API Key (Create at Google AI Studio). If omitted/empty, Gemini check is skipped. \n\n[group_name]\n(Optional) The exact name of the Surge policy group to manage (Must match profile). Default: AI Tools. \n\n[cron_expression] \n(Optional) Cron schedule for the check (Format: Sec Min Hour Day Month Week [Sec]). Default: 0 */15 * * * * (Every 15 min). \n\n[timeout_seconds] \n(Optional) Max script execution time in seconds. Default: 300 (5 min).
+#!arguments=surge_url:https://127.0.0.1:6800,surge_key,group_name:AI Tools,cron_expression:0 */15 * * * *,timeout_seconds:180
+#!arguments-desc=[surge_url]\n(Optional) Surge HTTP API Base URL. Default: https://127.0.0.1:6800.\n\n[surge_key]\n(Required) Your Surge HTTP API Key (Get from Surge > Settings > HTTP API). \n\n[group_name]\n(Optional) The exact name of the Surge policy group to manage (Must match profile). Default: AI Tools. \n\n[cron_expression] \n(Optional) Cron schedule for the check (Format: Sec Min Hour Day Month Week [Sec]). Default: 0 */15 * * * * (Every 15 min). \n\n[timeout_seconds] \n(Optional) Max script execution time in seconds. Default: 300 (5 min).
 
 [Script]
-ai-proxy-checker-job = type=cron, cronexp={{{cron_expression}}}, script-path=https://raw.githubusercontent.com/Marcio2536/MySurge/refs/heads/main/Script/ai-proxy-checker.js, argument=surge_url={{{surge_url}}}&surge_key={{{surge_key}}}&gemini_key={{{gemini_key}}}&group_name={{{group_name}}}, timeout={{{timeout_seconds}}}
+ai-proxy-checker-job = type=cron, cronexp={{{cron_expression}}}, script-path=ttps://raw.githubusercontent.com/Marcio2536/MySurge/refs/heads/main/Script/ai-proxy-checker.js, argument=surge_url={{{surge_url}}}&surge_key={{{surge_key}}}&group_name={{{group_name}}}, timeout={{{timeout_seconds}}}
